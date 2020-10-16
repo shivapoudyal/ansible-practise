@@ -1,5 +1,5 @@
 ---
- - name: Lauch EC-2 Instance
+ - name: Launch EC-2 Instance
    hosts: own-server
    tasks:
     - name: launching...
