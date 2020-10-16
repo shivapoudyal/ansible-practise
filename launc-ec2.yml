@@ -1,0 +1,16 @@
+---
+ - name: Lauch EC-2 Instance
+   hosts: own-server
+   tasks:
+    - name: launching...
+      ec2:
+       key_name: nv
+       region: us-east-1
+       instance_type: t2.micro
+       image: ami-0817d428a6fb68645
+       group: devops_sg
+       #vpc_subnet_id: your_vpc_subnet_id #(vpc->subnet_id)
+       #assign_public_ip: yes
+       count: 1
+       aws_access_key: AKIAJ4GBPMRUXFGFUEVQ
+       aws_secret_key: GUKxQCaUxa2mVHBHyyI8xirR9hS6E2E5hGy6FxRr
