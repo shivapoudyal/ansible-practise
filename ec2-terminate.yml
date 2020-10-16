@@ -1,0 +1,12 @@
+---
+ - name: EC2 Instance Termination
+   hosts: own-server
+   tasks:
+    - name : terminating...
+      ec2:
+       instance_ids: i-023085038290acfc9
+       region: us-east-1
+       state: stopped
+       #state: abesent
+       aws_access_key: AKIAJ4GBPMRUXFGFUEVQ
+       aws_secret_key: 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
